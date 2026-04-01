@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliz Aniversário!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- TELA DE CARREGAMENTO -->
+  <section id="loading-screen" class="screen active">
+    <div class="loading-box">
+      <div class="spinner"></div>
+      <h2 id="loading-title">Estamos captando sua velhice...</h2>
+      <p id="loading-subtitle">Aguarde enquanto analisamos seu nível de senhoridade.</p>
+      <div class="progress-container">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PÁGINA PRINCIPAL -->
+  <main id="main-content" class="hidden">
+    <canvas id="confetti-canvas"></canvas>
+
+    <div class="overlay"></div>
+
+    <section class="hero">
+      <h1>Feliz Aniversário, velhote! 🎉</h1>
+      <p>
+        Mais um ano de vida, menos algumas memórias...
+        mas o importante é que o bolo ainda existe.
+      </p>
+
+      <button id="play-music-btn" class="hidden">Tocar música</button>
+      <p id="autoplay-status" class="autoplay-status">Tentando iniciar música automaticamente...</p>
+    </section>
+
+    <section class="carousel-section">
+      <h2>Momentos da sua velhice memorável</h2>
+
+      <div class="carousel">
+        <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
+
+        <div class="carousel-track-container">
+          <div class="carousel-track" id="carouselTrack">
+            <img src="img1.jpeg" alt="Imagem 1" class="carousel-slide active" />
+            <img src="img2.jpeg" alt="Imagem 2" class="carousel-slide" />
+            <img src="img3.jpeg" alt="Imagem 3" class="carousel-slide" />
+             <img src="img4.jpeg" alt="Imagem 4" class="carousel-slide" />
+          </div>
+        </div>
+
+        <button class="carousel-btn next" id="nextBtn">&#10095;</button>
+      </div>
+    </section>
+
+    <audio id="musica" src="asael.mp3" preload="auto" loop playsinline></audio>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
