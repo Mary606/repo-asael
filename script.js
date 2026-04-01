@@ -45,19 +45,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const autoplayStatus = document.getElementById("autoplay-status");
 
-  function startConfetti(duration = 10000) {
+  function startConfetti(duration = 6000) {
     const end = Date.now() + duration;
     (function frame() {
       confetti({
-        particleCount: 20,
+        particleCount: 12,
         angle: 60,
-        spread: 55,
+        spread: 45,
         origin: { x: 0 }
       });
       confetti({
-        particleCount: 20,
+        particleCount: 12,
         angle: 120,
-        spread: 55,
+        spread: 45,
         origin: { x: 1 }
       });
       if (Date.now() < end) {
